@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="mx-0 mx-sm-auto">
+    <div class="card">
+        <div class="card-body">
+            <div class="text-center">
+                <p>
+                    <h3><strong>Question Form</strong></h3>
+                </p>
+                <p>
+                    Have some Questions?
+                    <strong>Add Below.</strong>
+                </p>
+            </div>
+    
+            <hr />
+            <div class="form-group">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <form method='POST' action="{% url 'question' %}">{% csrf_token %}
+
+                        <p class="text-center"><textarea placeholder="write your text here..." type="text" class="form-control"  required name="questions"></textarea></p>
+
+                        <p class="text-center"><button type="submit" class="btn btn-primary">Submit</button></p>
+                    </form>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+    
+{% endblock %}
+

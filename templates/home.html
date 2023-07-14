@@ -1,8 +1,9 @@
-<html>
-    <head>
+{% extends "base.html" %}
 
-    </head>
-    <body>
-        <h1>Welcome to home page.</h1>
-    </body>
-</html>
+
+{% block content %}
+    <h1>Welcome to home page..</h1>
+
+    <h2> <a href="{% url 'question' %}">Add Question</a></h2>
+{% endblock %}
+

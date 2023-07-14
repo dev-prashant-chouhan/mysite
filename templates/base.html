@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+    {% block header %}
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {% endblock %}
+
+    {% block page %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'info' %}alert-warning{% else %} alert-danger{% endif %}">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <center><strong>{{ message }}!</strong></center>
+        </div>
+        {% endfor %}
+        {% endif %}
+    {% endblock  %}
+
+    {% block content %}
+
+    {% endblock  %}
+
+    {% block footer %}
+
+    {% endblock footer %}
+
+    {%block script%}
+
+    {% endblock  %}
+
+    </body>
+
+</html>
