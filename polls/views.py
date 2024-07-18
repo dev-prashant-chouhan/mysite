@@ -20,5 +20,6 @@ class QuestionView(View):
         return render(request, "add_questions.html")
     
     def post(self, request, *args, **kwargs):
+        # Post method
         messages.success(request, "Your Question has been added Successfully")
         return render(request, "add_questions.html")
